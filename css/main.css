@@ -1,0 +1,21 @@
+#canvas {
+  width: 40%;
+  min-width: 200px;
+  height: auto;
+  margin: auto;
+  border: 1px solid black;
+  display: grid;
+  --dimension: 16;
+  grid-template-columns: repeat(var(--dimension), 1fr);
+  grid-template-rows: repeat(var(--dimension), 1fr);
+}
+
+.cell {
+  border: 1px solid grey;
+}
+
+.cell::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
