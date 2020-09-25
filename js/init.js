@@ -9,3 +9,6 @@ resetButton.addEventListener('click', reset);
 
 const newButton = document.querySelector('#new');
 newButton.addEventListener('click', newCanvas);
+
+const colorButton = document.querySelector('#color');
+colorButton.addEventListener('click', toggleColor);

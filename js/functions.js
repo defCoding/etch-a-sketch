@@ -1,7 +1,28 @@
 const maxDimension = 50;
+let grayscale = true;
 
 function colorCell() {
-  this.style.backgroundColor = 'grey';
+  let color = 'grey';
+
+  // Do rainbow coloring if not in grayscale.
+  if (!grayscale) {
+    // Make sure color is not white.
+    do {
+      let hex = '0123456789ABCDEF';
+      color = '#';
+
+      for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+      }
+    } while (color == '#FFFFFF');
+  }
+
+  this.style.backgroundColor = color;
+}
+
+function toggleColor() {
+  grayscale = !grayscale;
+  this.textContent = grayscale ? 'Set Rainbow' : 'Set Grayscale';
 }
 
 function reset() {
