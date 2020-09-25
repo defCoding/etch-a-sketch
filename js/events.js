@@ -15,7 +15,7 @@ function newCanvas() {
   try {
     // Get a valid dimension.
     let dimension = parseInt(prompt(`Enter a new size for the canvas (max ${maxDimension}): `, '16'));
-    if (dimension > maxDimension || dimension < 1) {
+    if (dinmension.isNan() || dimension > maxDimension || dimension < 1) {
       throw "Too big!";
     }
    
