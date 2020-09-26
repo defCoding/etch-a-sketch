@@ -1,4 +1,4 @@
-const maxDimension = 50;
+const maxDimension = 100;
 let grayscale = true;
 
 function colorCell() {
@@ -56,7 +56,7 @@ function createCanvas(dimension) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
     cell.addEventListener('mouseover', colorCell);
+    cell.style.backgroundColor = "white";
     canvas.appendChild(cell);
   }
 }
-  

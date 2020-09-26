@@ -1,17 +1,58 @@
-#canvas {
-  width: 40%;
-  min-width: 200px;
-  height: auto;
+body {
+  background-image: url("../assets/background.jpg");
+  background-repeat: repeat;
+}
+
+#title {
+  text-align: center;
+}
+
+#title > h1 {
+  display: inline-block;
+}
+
+#container {
+  width: 80%;
+  max-width: 100vh;
   margin: auto;
-  border: 1px solid black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#controls {
+  padding: 5px;
+  flex: 1 0 8em;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+#controls > button {
+  margin: 1em;
+  height: 3em;
+  max-width: 9em;
+  flex: 1 1 9em;
+}
+
+#main-area {
+  flex: 9 0 500px;
+  max-width: 100%;
+}
+
+#canvas {
+  border: 10px solid orange;
   display: grid;
   --dimension: 16;
   grid-template-columns: repeat(var(--dimension), 1fr);
   grid-template-rows: repeat(var(--dimension), 1fr);
+  justify-content: center;
 }
 
 .cell {
-  border: 1px solid grey;
+  border: 1px dashed grey;
 }
 
 .cell::before {
